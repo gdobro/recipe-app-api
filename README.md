@@ -71,3 +71,16 @@ touch app/core/tests/__init__.py
 add `core` to installed apps list in `app/app/settings.py`
 
 edit `app/core/tests/test_models.py`
+
+```
+docker-compose run --rm app sh -c "python manage.py test"
+```
+
+## implement a custom user models
+
+```
+vi app/core/models.py  # add model
+vi app/app/settings.py  # customize to user model
+docker-compose run --rm app sh -c "python manage.py makemigrations core"  # create model User
+docker-compose run --rm app sh -c "python manage.py test"  # should pass now
+```
