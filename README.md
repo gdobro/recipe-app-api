@@ -58,3 +58,16 @@ docker run \
 docker stop jenkins-docker
 ```
 
+## create core app
+
+```
+docker-compose run --rm app sh -c "python manage.py startapp core"
+rm app/core/tests.py
+rm app/core/views.py
+mkdir app/core/tests
+touch app/core/tests/__init__.py
+```
+
+add `core` to installed apps list in `app/app/settings.py`
+
+edit `app/core/tests/test_models.py`
