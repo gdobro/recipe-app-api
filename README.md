@@ -90,6 +90,21 @@ docker-compose run --rm app sh -c "python manage.py test"  # should pass now
 Make invalid email raise Value Error, including test (TDD).
 
 
-# add create superuser
+## add create superuser
 
 Add test_create_new_superuser, then add create_superuser
+
+## Now for the admin interface
+
+First create tests
+```
+vi app/core/tests/test_admin.py
+```
+
+Add AdminSiteTests
+
+get to know django url handling and creation and reverse.
+
+learn to configure UserAdmin properties `ordering`, `list_display`, and `fieldsets`.
+
+ 
