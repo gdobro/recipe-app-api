@@ -84,3 +84,7 @@ vi app/app/settings.py  # customize to user model
 docker-compose run --rm app sh -c "python manage.py makemigrations core"  # create model User
 docker-compose run --rm app sh -c "python manage.py test"  # should pass now
 ```
+
+## add validation for email fields
+
+Make invalid email raise Value Error, including test (TDD).
