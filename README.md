@@ -101,10 +101,10 @@ First create tests
 vi app/core/tests/test_admin.py
 ```
 
+There, test own code, not django functions!
+
 Add AdminSiteTests
 
 get to know django url handling and creation and reverse.
 
 learn to configure UserAdmin properties `ordering`, `list_display`, and `fieldsets`.
-
- 
