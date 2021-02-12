@@ -88,3 +88,8 @@ docker-compose run --rm app sh -c "python manage.py test"  # should pass now
 ## add validation for email fields
 
 Make invalid email raise Value Error, including test (TDD).
+
+
+# add create superuser
+
+Add test_create_new_superuser, then add create_superuser
