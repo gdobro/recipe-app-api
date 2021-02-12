@@ -17,10 +17,11 @@ class ModelTests(TestCase):
         self.assertTrue(user.check_password(password))
 
     def test_new_user_email_normalized(self):
-        """Test email for new user is cast to lowercase"""
+        """Test email for new user is normalized"""
         email = "bob.rooney@GoofyCompany.coM"  # no uppercase in name
         user = get_user_model().objects.create_user(email, 'test123')
 
+        # normalization makes domain lowercase
         self.assertEqual(user.email, email.lower())
 
     def test_new_user_invalid_email(self):
